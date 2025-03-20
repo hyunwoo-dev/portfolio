@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 
-body{font-family:'Pretendard', sans-serif; line-height: 1.5; font-size: 1.6rem; overflow: hidden; list-style: none;}
+body{font-family:'Pretendard', sans-serif; line-height: 1.5; font-size: 1.6rem;  list-style: none;}
 .inner{max-width: 1700px; margin: 0 auto; padding: 0 5%;}
 
 section{overflow: hidden;}
