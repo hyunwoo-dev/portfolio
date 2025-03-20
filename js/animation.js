@@ -1,76 +1,21 @@
-// 텍스트 분리 및 여백 표현
-document.querySelectorAll(".split").forEach(text => {
-  let theText = text.innerText;
-  let newText = "";
+// 메인 비디오 및 텍스트 애니메이션 실행
+function showMainVideo() {
+  gsap.to(".parallax__item__video", { opacity: 1, duration: 1.2 }); // 동영상 서서히 나타남
+  gsap.fromTo(".parallax__item__text h2 span",
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 0.8, stagger: 0.1, delay: 0.5 }
+  ); // 글자가 한 글자씩 위로 올라오면서 나타남
+}
 
-  for (let i = 0; i < text.innerText.length; i++) {
-    newText += "<span aria-hidden='true'>";
-    if (text.innerText[i] == " ") {
-      newText += "&nbsp";
-    }
-    else {
-      newText += text.innerText[i];
-    }
-    newText += "</span>";
-  }
-
-  text.innerHTML = newText;
-  text.setAttribute("aria-label", theText);
+// 로딩 섹션이 없어졌으므로, 페이지 로드 후 바로 실행
+document.addEventListener("DOMContentLoaded", () => {
+  showMainVideo();
 });
 
-// 텍스트 1번과 3번만 사용하고 2번 제거
-gsap.fromTo(".loading_txt01",
-  { opacity: 0 },
-  { opacity: 1, duration: 1.5, delay: 0.6, onComplete: fadeOutTxt01 }
-);
-
-function fadeOutTxt01() {
-  gsap.to(".loading_txt01", { opacity: 0, duration: 0.6, onComplete: fadeInTxt03 });
-}
-
-function fadeInTxt03() {
-  gsap.fromTo(".loading_txt03",
-    { opacity: 0 },
-    { opacity: 1, duration: 1.5, delay: 0.4, onComplete: fadeOutVideo }
-  );
-}
-
-function fadeOutVideo() {
-  gsap.to(".loading_txt03", { opacity: 0, duration: 0.6, onComplete: fadeOutLoading });
-}
-
-function fadeOutLoading() {
-  gsap.to(".loading", {
-    opacity: 0, duration: 1.5, onComplete: () => {
-      document.querySelector(".loading").style.display = "none"; // 로딩 섹션을 숨김
-      document.body.style.overflow = 'auto'; // 스크롤 활성화
-      showMainVideo(); // 비디오 표시 함수 호출
-    }
-  });
-}
-
-// 로딩 시작 시 스크롤 비활성화
-document.body.style.overflow = 'hidden';
-
-
-
-
-
-// 메인 비디오 및 텍스트 애니메이션 동기화
-function showMainVideo() {
-  setTimeout(() => {
-    gsap.to(".parallax__item__video", { opacity: 1, duration: 1.2 }); // 동영상 서서히 나타남
-    gsap.fromTo(".parallax__item__text h2 span",
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 0.8, stagger: 0.1, delay: 0.5 }
-    ); // 글자가 한 글자씩 위로 올라가면서 나타남
-  }, 500); // 0.5초 대기 후 동영상 나타남
-}
-
-
+// 메인 섹션의 확대 및 사라지는 애니메이션
 const ani6 = gsap.timeline();
 ani6.to(".main_visual .parallax__item__text", { scale: 3, duration: 7 })
-  .to(".main_visual .parallax__item__text", { autoAlpha: 0 })
+  .to(".main_visual .parallax__item__text", { autoAlpha: 0 });
 
 ScrollTrigger.create({
   animation: ani6,
@@ -80,8 +25,8 @@ ScrollTrigger.create({
   scrub: 1.2,
   pin: true,
   anticipatePin: 1,
-  /*  markers: true */
 });
+
 
 
 
