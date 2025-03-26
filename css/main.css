@@ -639,7 +639,7 @@ p {
 
 
 
-.project2 .graphic_box .gr1 li:hover img{transition: all 15s linear;}
+.project2 .graphic_box .gr1 li:hover img{transition: all 10s linear;}
 .project2 .graphic_box .gr1 li:hover img{transform: translateY(-100%);}
 .project2 .graphic_box .gr1 li img:hover{transform: translateY(-80%);}
 
@@ -655,7 +655,7 @@ p {
 
 
 
-.project2 .graphic_box .gr3 li:hover img{transition: all 15s linear;}
+.project2 .graphic_box .gr3 li:hover img{transition: all 10s linear;}
 .project2 .graphic_box .gr3 li:hover img{transform: translateY(-100%);}
 .project2 .graphic_box .gr3 li img:hover{transform: translateY(-80%);}
 
