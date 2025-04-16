@@ -621,13 +621,6 @@ p {
 .project2 .graphic_box .gr4 li{overflow: hidden;}
 .project2 .graphic_box .gr4 li:nth-child(2){height: 494px;}
 
-.project2 .graphic_box .gr1  li .gr_txt{display: flex; align-items: center; gap: 5px; justify-content: center;}
-.project2 .graphic_box .gr1  li .gr_txt span{font-size: 1.6rem; font-weight: 400;}
-
-.project2 .graphic_box .gr3  li .gr_txt{display: flex; align-items: center; gap: 5px; justify-content: center;}
-.project2 .graphic_box .gr3  li .gr_txt span{font-size: 1.6rem; font-weight: 400;}
-
-
 
 
 
