@@ -623,6 +623,13 @@ p {
 
 
 
+.project2 .graphic_box .gr1  li .gr_txt{display: flex; align-items: center; gap: 5px; justify-content: center;}
+.project2 .graphic_box .gr1  li .gr_txt span{font-size: 1.6rem; font-weight: 400;}
+
+.project2 .graphic_box .gr3  li .gr_txt{display: flex; align-items: center; gap: 5px; justify-content: center;}
+.project2 .graphic_box .gr3  li .gr_txt span{font-size: 1.6rem; font-weight: 400;}
+
+
 
 .project2 .graphic_box li .gr_txt{transition: all 0.5s; background: rgba(0,0,0,0.65); width: 100%; position: absolute; bottom: 0; color: #fff; text-align: center; padding: 10px 0;}
 .project2 .graphic_box li .gr_txt p{font-size: 2rem; font-weight: 700; color: #fff;}
