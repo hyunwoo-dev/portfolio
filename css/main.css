@@ -448,7 +448,7 @@ section{overflow: hidden;}
 }
 
 
-@media(max-width:655px){
+@media(max-width:620px){
 
   #main #home h2{font-size: 3rem; font-weight: 500;}
   #main #home p{font-size: 3rem; font-weight: 600;}
@@ -485,8 +485,33 @@ section{overflow: hidden;}
   #main #home .home_pad{padding: 70px 0 10px;}
 
 
-  #main #home h2{font-size: 2.5rem; font-weight: 500;}
-  #main #home p{font-size: 2.5rem; font-weight: 600;}
+  #main #home h2{font-size: 3.5rem; font-weight: 500;}
+  #main #home p:not(.web_3){font-size: 2.5rem; font-weight: 600;}
+
+
+  #main #home .home1 .tag1{width: 37px; height: 35px; margin: 0 10px;}
+  #main #home .home2 .tag2{width: 37px; height: 35px; margin: 0 10px;}
+  #main #home .home3 .tag3{width: 37px; height: 35px; margin: 0 10px;}
+  #main #home .home4 .tag4{width: 37px; height: 35px; margin: 0 10px;}
+
+
+
+  #main #home .home2 img{width: 25px;}
+
+
+  #main #home .home2{padding: 4px 0;}
+  #main #home .home3{padding: 0 0 4px 0;}
+}
+
+
+
+@media(max-width:360px){
+
+  #main #home .home_pad{padding: 70px 0 10px;}
+
+
+  #main #home h2{font-size: 3rem; font-weight: 500;}
+  #main #home p:not(.web_3){font-size: 2.5rem; font-weight: 600;}
 
 
   #main #home .home1 .tag1{width: 37px; height: 35px; margin: 0 10px;}
@@ -506,6 +531,7 @@ section{overflow: hidden;}
 
 
 }
+
 
 
 
